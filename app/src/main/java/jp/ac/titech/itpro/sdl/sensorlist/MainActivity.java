@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         ListView sensorsView = findViewById(R.id.main_sensors);
-        ArrayAdapter<Sensor> adapter = new ArrayAdapter<Sensor>(this, 0, new ArrayList<Sensor>()) {
+        ArrayAdapter<Sensor> adapter = new ArrayAdapter<Sensor>(this, 0, new ArrayList<>()) {
             @Override
             public @NonNull
             View getView(int pos, @Nullable View view, @NonNull ViewGroup parent) {

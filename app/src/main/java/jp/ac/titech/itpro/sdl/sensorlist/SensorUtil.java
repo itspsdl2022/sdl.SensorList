@@ -10,7 +10,7 @@ import java.util.List;
 class SensorUtil {
     static String getTypeName(Sensor sensor) {
         try {
-            Class klass = sensor.getClass();
+            Class<? extends Sensor> klass = sensor.getClass();
             for (Field field : klass.getFields()) {
                 String fieldName = field.getName();
                 if (fieldName.startsWith("TYPE_") && field.getInt(klass) == sensor.getType()) {
